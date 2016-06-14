@@ -1,8 +1,9 @@
 build:
   image: node:4
   commands:
-    - npm install --no-progress --color --quiet
-    - npm run ci --no-progress --color
+    - npm install --color --quiet --unsafe-perm
+    - "npm start &"
+    - npm run ci --color
 
 compose:
   selenium:
