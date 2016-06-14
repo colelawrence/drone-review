@@ -1,7 +1,9 @@
 build:
   image: node:4
   commands:
+    - ls
     - npm install --no-progress --color --quiet
+    - "npm start &"
     - npm run ci --no-progress --color
 
 compose:
