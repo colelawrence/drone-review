@@ -45,7 +45,7 @@
     "lint": "npm run tslint 'src/**/*.ts'",
 
       "pree2e": "npm run webdriver:update -- --standalone",
-    "e2e": "npm run protractor",
+    "e2e": "concurrently \"npm run protractor\" \"npm run start:test\" --kill-others",
       "e2e:live": "npm run e2e -- --elementExplorer",
 
     "test": "node --max-old-space-size=4096 node_modules/karma/bin/karma start",
@@ -56,6 +56,7 @@
 
     "start": "npm run server:dev",
       "start:hmr": "npm run server:dev:hmr",
+      "start:test": "webpack-dev-server --config config/webpack.dev.js > ./profile.webpack.json",
 
     "postinstall": "npm run typings -- install",
 
@@ -107,6 +108,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.7.0",
     "codelyzer": "0.0.12",
+    "concurrently": "ZombieHippie/concurrently#patch-1",
     "parse5": "^1.3.2",
     "phantomjs-polyfill": "0.0.2",
     "phantomjs-prebuilt": "^2.1.6",
