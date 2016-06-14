@@ -1,5 +1,5 @@
 build:
-  image: node:4
+  image: node:5
   commands:
     - npm install --color --quiet --unsafe-perm
     - "npm start &"
