@@ -1,7 +1,7 @@
 build:
   image: node:4
   commands:
-    - npm install --color --quiet --unsafe-perm > npm-install.log
+    - npm install --no-progress --color --quiet --unsafe-perm
     - "npm start &"
     - npm run ci --color
 clone:
