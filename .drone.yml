@@ -1,8 +1,14 @@
 build:
   image: node:4
   commands:
-    - npm install --no-progress --color --quiet --unsafe-perm > npm-install.log
-    - npm test
+    - ls
+    - npm install --no-progress --color --quiet
+    - "npm start &"
+    - npm run ci --no-progress --color
+
+compose:
+  selenium:
+    image: selenium/standalone-chrome
 clone:
   depth: 10
 cache:

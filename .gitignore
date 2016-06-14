@@ -37,6 +37,7 @@ npm-debug.log
 
 # Coverage #
 /coverage/
+/profile.webpack.json
 
 # Typing #
 /src/typings/tsd/
