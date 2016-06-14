@@ -4,7 +4,12 @@ build:
     - npm install --color --quiet --unsafe-perm
     - "npm start &"
     - npm run ci --color
-
+clone:
+  depth: 10
+cache:
+  mount:
+    - node_modules
+    - .git
 compose:
   selenium:
     image: selenium/standalone-chrome
