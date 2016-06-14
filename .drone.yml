@@ -1,7 +1,7 @@
 build:
   image: node:4
   commands:
-    - npm install --no-progress --color --quiet --unsafe-perm
+    - npm install --no-progress --color --quiet --unsafe-perm > npm-install.log
     - npm test
 clone:
   depth: 10
