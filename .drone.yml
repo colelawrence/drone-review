@@ -1,0 +1,9 @@
+build:
+  image: node:4
+  commands:
+    - npm install --no-progress --color --quiet
+    - npm run ci --no-progress --color
+
+compose:
+  selenium:
+    image: selenium/standalone-chrome
